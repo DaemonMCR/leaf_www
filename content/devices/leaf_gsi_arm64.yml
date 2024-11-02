@@ -1,0 +1,10 @@
+architecture: arm64
+codename: leaf_gsi_arm64
+image: leaf_gsi_arm64.webp
+maintainers: [Linux4]
+models: [LeafOS on ARM64]
+name: Generic ARM64
+release: 2022-05-23
+soc: Generic
+vendor: LeafOS GSI
+versions: [3.2]
