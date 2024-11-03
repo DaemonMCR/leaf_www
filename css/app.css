@@ -1,0 +1,219 @@
+/* Add some colours and other variables that will be used throughout website */
+
+:root {
+    --transition: color 200ms ease-in-out, border-color 200ms ease-in-out;
+  
+    /* H3 to h6 and text color */
+    --text-color: #111;
+  
+    /* H1 and H2 */
+    --heading-color: #669982;
+  
+    --background-color: #fff;
+    --hero-bg-color: #e4f6ee;
+    --hero-text-color: #669982;
+  
+    /* Buttons */
+    --button-color: #fff;
+    --button-bg: #109c5c;
+    --button-bg-hover: #0e854e;
+    --button-bg-active: #0b6e41;
+  
+    /* Links */
+    --link-color: #07a55d;
+  
+    --control-bg: #e4f6ee;
+    --control-color: #669982;
+    --control-hover: #f2fbf7;
+    --control-active: #bee9d6;
+    --control-text-active: #669982;
+  
+    --shadow: 0 2px 6px rgb(0 0 0 / 25%);
+  
+    --alert-bg: #fff2ae;
+    --alert-color: #ad6c00;
+    --error-bg: #fdcdcd;
+    --error-color: #d83e3e;
+    --success-bg: #b4f1af;
+    --success-color: #33722d;
+}
+  
+@media (prefers-color-scheme: dark) {
+:root {
+    /* H3 to h6 and text color */
+    --text-color: #ddd;
+
+    /* H1 and H2 */
+    --heading-color: #6c9381;
+
+    --background-color: #141f1a;
+    --hero-bg-color: #1b2822;
+    --hero-text-color: #6c9381;
+
+    /* Buttons */
+    --button-color: #141f1a;
+    --button-bg: #109c5c;
+    --button-bg-hover: #0e854e;
+    --button-bg-active: #0b6e41;
+
+    /* Links */
+    --link-color: #07a55d;
+
+    --control-color: #6c9381;
+    --control-bg: #1b2822;
+    --control-hover: #17231e;
+    --control-active: #060908;
+    --control-text-active: #6c9381;
+
+    --shadow: 0 2px 6px rgb(0 0 0 / 50%);
+}
+}
+
+/* Add a font we will use throughout whole website as primary font. */
+@font-face {
+    font-family: 'HarmonyOS Sans Bold';
+    src: url('./content/devices/fonts/HarmonyOS_Sans_Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+}
+
+/* Set a defauly background colour and use the font. */
+body {
+    background: #141F1A;
+    font-family: 'HarmonyOS Sans Bold', sans-serif;
+    margin: 0;
+}
+
+/* Styles for first header bar */
+.leaf-features {
+    color: #DDDDDD;
+    font-family: 'HarmonyOS Sans Bold', sans-serif;
+    font-size: 1.235rem;
+    margin: 0;
+    padding: 20px;
+    margin-bottom: 0px;
+}
+
+/* Get LeafOS button */
+.get-leaf-button {
+    padding: 10px 30px;
+    background-color: #109c5c;
+    border: none;
+    font-weight: 600;
+    color: black;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.get-leaf-button:hover {
+    background-color: #0e854e;
+}
+  
+.get-leaf-button:active {
+    background-color: #0b6e41;
+}
+
+/* Download button */
+.header-bar .download-button {
+    padding: 7px 15px;
+    background-color: #109c5c;
+    border: none;
+    font-weight: 600;
+    color: black; /* Ensures the text color is black */
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 20px;
+    line-height: normal; /* Ensure line height is set to normal or a specific value */
+    height: auto; /* Allow height to adjust based on padding */
+}
+
+.download-button:hover {
+    background-color: #0e854e;
+}
+  
+.download-button:active {
+    background-color: #0b6e41;
+}
+
+/* Navigation bar */
+.header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align items to the right */
+    padding: 8px 15px; /* Reduced padding for a smaller nav bar */
+    position: sticky;
+    background-color: #141F1A;
+    border-bottom: 2px solid #2A3F36; /* Adds a subtle bottom border */
+}
+
+.header-bar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-bar .logo img {
+    height: 50px; /* Adjust height to make logo smaller */
+    width: auto; /* Keep aspect ratio */
+    margin-right: 10px; /* Reduced space between logo and site name */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end; /* Aligns links to the right */
+}
+
+/* Ensure nav links have similar vertical alignment */
+.nav-links a {
+    display: flex; /* Align items inside the anchor tag */
+    align-items: center; /* Center align text vertically */
+    padding: 5px; /* Reduced padding for nav links */
+    color: white; /* Ensure link color is set */
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 15px; /* Reduced space between links */
+    font-size: 0.95rem; /* Slightly smaller font size */
+}
+
+.nav-links a:hover {
+    text-decoration: underline; /* Keep underline effect on hover */
+}
+
+
+/* Adds padding to the main content to keep it separated from the header */
+.main-content {
+    padding: 20px;
+    margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .header-bar .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* Now we have a nice header-bar lets work on the different section's style */
+
+.section-bar {
+    background-color: #2A3F36; /* Dark green color for the bar */
+    color: #8FFFC6; /* Light green text color */
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 20px; /* Adds space between sections */
+    border-radius: 10px; /* Optional: rounded corners */
+}
