@@ -143,6 +143,7 @@ body {
     margin-left: 20px;
     line-height: normal; /* Ensure line height is set to normal or a specific value */
     height: auto; /* Allow height to adjust based on padding */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
 
 .download-button:hover {
