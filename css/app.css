@@ -72,7 +72,7 @@
 /* Add a font we will use throughout whole website as primary font. */
 @font-face {
     font-family: 'HarmonyOS Sans Bold';
-    src: url('./content/devices/fonts/HarmonyOS_Sans_Bold.ttf') format('truetype');
+    src: url('./../content/fonts/HarmonyOS_Sans_Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-size: 18px;
@@ -80,7 +80,8 @@
 
 /* Set a defauly background colour and use the font. */
 body {
-    background: #141F1A;
+    /*background: #141F1A; */
+    background: #1B2822;
     font-family: 'HarmonyOS Sans Bold', sans-serif;
     margin: 0;
 }
@@ -95,6 +96,13 @@ body {
     margin-bottom: 0px;
 }
 
+/* Charter design */
+.charter {
+    color: #DDDDDD;
+    font-family: 'HarmonyOS Sans Bold', sans-serif;
+    font-size: 1.235rem;
+}
+
 /* Get LeafOS button */
 .get-leaf-button {
     padding: 10px 30px;
@@ -107,6 +115,7 @@ body {
     cursor: pointer;
     display: inline-block;
     margin-left: 20px;
+    text-decoration: none;
 }
 
 .get-leaf-button:hover {
@@ -145,16 +154,19 @@ body {
 .header-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Align items to the right */
-    padding: 8px 15px; /* Reduced padding for a smaller nav bar */
+    justify-content: space-between;
+    padding: 8px 15px;
     position: sticky;
     background-color: #141F1A;
-    border-bottom: 2px solid #2A3F36; /* Adds a subtle bottom border */
+    box-shadow: 0px 4px 10px -5px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
 .header-bar .logo {
     display: flex;
     align-items: center;
+    padding: 0 10px;
+    border: 0;
 }
 
 .header-bar .logo img {
@@ -181,9 +193,9 @@ body {
 }
 
 .nav-links a:hover {
-    text-decoration: underline; /* Keep underline effect on hover */
+    text-decoration: none; /* Remove the underline effect */
+    filter: brightness(90%); /* Slightly darken the color */
 }
-
 
 /* Adds padding to the main content to keep it separated from the header */
 .main-content {

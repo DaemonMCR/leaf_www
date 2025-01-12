@@ -10,16 +10,16 @@
 <body>
     <header class="header-bar">
         <div class="logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="./content/images/devices/leaf_gsi_arm64.webp" alt="Logo" class="logo-image">
             </a>
         </div>
         <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="community.html">Community</a>
-            <a href="wiki.html">Wiki</a>
-            <a href="download.html" class="download-button">Download</a>
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="charter.php">Charter</a>
+            <a href="wiki.php">Wiki</a>
+            <a href="download.php" class="download-button">Download</a>
         </nav>
     </header>
 
@@ -28,11 +28,10 @@
             <div class="section-bar">Welcome to the Leaf OS!</div>
             <p class="leaf-features">LeafOS is a no-nonsense custom ROM designed to give you exactly what you need without the fluff. We've cut out the unnecessary clutter and included only the essentials, so you get a clean, efficient Android experience.</p>
             <p class="leaf-features">Ready to upgrade your device? Let's get started with LeafOS!</p>
-            <a href="download.html" class="get-leaf-button">Get LeafOS</a>
+            <a href="download.php" class="get-leaf-button">Get LeafOS</a>
             <div class="section-bar">Leaf features</div>
         </section>
     </main>
 
-    <script src="js/app.js"></script>
 </body>
 </html>
