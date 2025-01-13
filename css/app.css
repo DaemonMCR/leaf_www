@@ -200,7 +200,7 @@ body {
 
 .nav-links a:hover {
     text-decoration: none; /* Remove the underline effect */
-    filter: brightness(90%); /* Slightly darken the color */
+    filter: brightness(70%); /* Slightly darken the color */
 }
 
 /* Adds padding to the main content to keep it separated from the header */
