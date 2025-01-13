@@ -36,6 +36,8 @@
     --error-color: #d83e3e;
     --success-bg: #b4f1af;
     --success-color: #33722d;
+
+    --features-color: #DDDDDD;
 }
   
 @media (prefers-color-scheme: dark) {
@@ -235,3 +237,83 @@ body {
     margin-top: 20px; /* Adds space between sections */
     border-radius: 10px; /* Optional: rounded corners */
 }
+
+
+/* Feature cards */
+
+.features-section {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #8FFFC6;
+    margin-bottom: 20px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: #1a2a24;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    color: #8FFFC6;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.features-text {
+    color: #DDDDDD
+}
+
+/* Screenshots formatting */
+
+.screenshot-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 10vw;
+    padding: 30px 0;
+  }
+  
+.screenshot-gallery img {
+    border-radius: 10px;
+    flex-basis: 16%;
+    width: 150px; /* Reduced the image size from 200px to 150px */
+    height: auto; /* Maintains the aspect ratio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screenshot-gallery img:hover {
+    transform: scale(1.025); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
