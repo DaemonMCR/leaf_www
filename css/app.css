@@ -458,6 +458,7 @@ body {
     background-color: #141F1A;
     color: #6C9381; /* White text color */
     padding: 20px 40px; /* Padding for the footer */
+    font-family: 'HarmonyOS Sans Bold', sans-serif;
     font-size: 16px; /* Font size */
     position: relative; /* Footer is placed naturally at the bottom */
     box-sizing: border-box; /* Include padding in the total width calculation */
