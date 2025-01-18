@@ -80,9 +80,8 @@
     font-size: 18px;
 }
 
-/* Set a defauly background colour and use the font. */
+/* Set a default background colour and use the font. */
 body {
-    /*background: #141F1A; */
     background: #1B2822;
     font-family: 'HarmonyOS Sans Bold', sans-serif;
     margin: 0;
@@ -96,13 +95,6 @@ body {
     margin: 0;
     padding: 20px;
     margin-bottom: 0px;
-}
-
-/* Charter design */
-.charter {
-    color: #DDDDDD;
-    font-family: 'HarmonyOS Sans Bold', sans-serif;
-    font-size: 1.235rem;
 }
 
 /* Get LeafOS button */
@@ -318,3 +310,162 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
 }
 
+/* Charter style */
+
+.charter {
+    padding: 20px;
+    background-color: #e8f5e9;
+    border: 10px solid #a3c9a8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 900px;
+    font-family: 'HarmonyOS Sans Bold', sans-serif;
+    font-size: 1.235rem;
+}
+
+.charter h1, 
+.charter h2, 
+.charter h3 {
+    color: #2d6a4f;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.charter p {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.charter ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.charter ul li {
+    padding-left: 30px;
+    margin-bottom: 10px;
+    position: relative;
+    color: #2d6a4f;
+}
+
+.charter ul li:before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #52b788;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.charter ul ul {
+    margin-left: 20px;
+}
+
+.charter ul ul li:before {
+    content: "•";
+    color: #52b788;
+    font-size: 1.2em;
+}
+
+.charter a {
+    color: #40916c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.charter a:hover {
+    color: #1b4332;
+}
+
+.charter #table-of-contents {
+    background-color: #effaf5;
+    border: 1px solid #b7e4c7;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Charter table */
+.page-body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.table-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px; /* Slightly round edges */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-header-row {
+    background-color: #4CAF50;
+}
+
+.table-header {
+    padding: 8px 10px; /* Reduced padding */
+    text-align: left;
+    color: white;
+    font-weight: bold;
+    font-size: 14px; /* Smaller font size */
+}
+
+.table-row:hover {
+    background-color: #f8f8f8; /* Lighter hover color */
+}
+
+.table-data {
+    padding: 8px 10px; /* Reduced padding */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    font-size: 14px; /* Smaller font size */
+}
+
+.page-divider {
+    border: 0;
+    border-top: 1px solid #ddd; /* Thinner divider */
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Footer */
+
+/* Content area */
+.content {
+    min-height: calc(100vh - 50px); /* Subtract footer height */
+    padding-bottom: 50px; /* Ensure content does not overlap with footer */
+}
+
+/* Footer styling */
+.footer {
+    width: 100%;
+    background-color: #141F1A;
+    color: #6C9381; /* White text color */
+    text-align: left; /* Align text to the left */
+    padding-bottom: 80px; /* Padding for the footer */
+    font-size: 16px; /* Font size */
+    position: relative; /* Footer is placed naturally at the bottom */
+}
+
+/* Move only the text (inside .content and .footer-content) */
+.content p,
+.footer-content p,
+.footer-content h2 {
+    padding-left: 148px; /* Move text 148px to the right */
+    margin: 0; /* Remove default margin */
+    position: relative; /* Keep text positioning relative to its current location */
+    top: 30px; /* Move text 20px down */
+}

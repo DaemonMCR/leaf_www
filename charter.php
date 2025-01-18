@@ -6,6 +6,12 @@ include 'includes/nav.php';
 
 <body>
     <article class="charter">
+
+    <!-- Title Section -->
+    <h1 style="text-align: center; font-weight: bold; text-decoration: margin-bottom: 20px;">
+        LeafOS Charter
+    </h1>
+
     <p>Welcome to the LeafOS Device Support Requirements. This document enumerates the requirements that must be met in order for devices to be deemed ship ready for LeafOS releases, beginning with Android Oreo.
         To be considered ready, device maintainers MUST meet the requirements presented in this document, including any documents incorporated via reference.
     </p>
@@ -413,63 +419,77 @@ include 'includes/nav.php';
     </ul>
     <h1 id="exceptions">Exceptions</h1>
     <p>All currently granted exceptions should be listed in the following table. To request an exception, please submit a change to this repository.</p>
-    <table>
-        <thead>
-        <tr>
-            <th>Date</th>
-            <th>Device/OEM</th>
-            <th>Section Exempted</th>
-            <th>Reason</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>2018/02/08</td>
-            <td>Samsung</td>
-            <td>Hardware Encryption</td>
-            <td>Samsung devices that cannot support hardware encryption due to Knox/Tee are exempted from the hardware crypto requirements. MUST still support software crypto.</td>
-        </tr>
-        <tr>
-            <td>2018/02/11</td>
-            <td>Android TV devices</td>
-            <td>In-Remote Microphones</td>
-            <td>Requires proprietary audio routing/methods that have no OSS counterpart, and rely on proprietary functions. MUST support Microphone input through the Android TV Remote app.</td>
-        </tr>
-        <tr>
-            <td>2018/02/12</td>
-            <td>hlte[can/tmo/usc/vzw]</td>
-            <td>NFC</td>
-            <td>Stock NFC HAL is undocumented and doesn&#39;t match any known interfaces. Stealing configs and firmware from devices with a proper setup fails due to a signature mismatch when the (required) firmware download is attempted.</td>
-        </tr>
-        <tr>
-            <td>2019/10/21</td>
-            <td>s3ve3g*</td>
-            <td>NFC</td>
-            <td>Stock NFC HAL is undocumented and doesn&#39;t match any known interfaces. Stealing configs and firmware from devices with a proper setup fails due to a signature mismatch when the (required) firmware download is attempted.</td>
-        </tr>
-        <tr>
-            <td>2023/04/11</td>
-            <td>FDE only devices</td>
-            <td>Encryption</td>
-            <td>As of Android 13, FDE is no longer supported. All devices that can MUST migrate to FBE, but Some devices have custom keymaster HAL implementations that only allow FDE to function. Devices only capable of using FDE that are promoted to LeafOS 20 or above are exempted from encryption requirements. These devices MUST display a notice on the LeafOS Wiki that details this exemption.</td>
-        </tr>
-        <tr>
-            <td>2024/02/07</td>
-            <td>Google Pixel</td>
-            <td>Prebuilt Kernel</td>
-            <td>As of Pixel 6, Google is building the kernel with bazel, which is very time consuming to integrate in our inline builds and keep it working. Given that these new devices have 5 or 7 years of support, we do not have to compile the kernel from source, since they receive monthly security patches directly from Google. These devices MUST use source built kernel or our own LeafOS compiled prebuilt kernel once they have reached their EOL.</td>
-        </tr>
-        <tr>
-            <td>2024/02/16</td>
-            <td>coral/flame</td>
-            <td>Face Unlock</td>
-            <td>On stock, Face Unlock and Soli features were largely tied to SystemUIGoogle, with a functional Face Unlock hook pushed to AOSP. Unfortunately, Google stopped caring about Face Unlock and let it break on the Pixel 4 series, with no way to fix it without source we don&#39;t have.</td>
-        </tr>
-        </tbody>
-    </table>
+
+    <body class="page-body">
+
+    <div class="table-container">
+        <table class="data-table">
+            <thead>
+                <tr class="table-header-row">
+                    <th class="table-header">Date</th>
+                    <th class="table-header">Device/OEM</th>
+                    <th class="table-header">Section Exempted</th>
+                    <th class="table-header">Reason</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-row">
+                    <td class="table-data">2018/02/08</td>
+                    <td class="table-data">Samsung</td>
+                    <td class="table-data">Hardware Encryption</td>
+                    <td class="table-data">Samsung devices that cannot support hardware encryption due to Knox/Tee are exempted from the hardware crypto requirements. MUST still support software crypto.</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-data">2018/02/11</td>
+                    <td class="table-data">Android TV devices</td>
+                    <td class="table-data">In-Remote Microphones</td>
+                    <td class="table-data">Requires proprietary audio routing/methods that have no OSS counterpart, and rely on proprietary functions. MUST support Microphone input through the Android TV Remote app.</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-data">2018/02/12</td>
+                    <td class="table-data">hlte[can/tmo/usc/vzw]</td>
+                    <td class="table-data">NFC</td>
+                    <td class="table-data">Stock NFC HAL is undocumented and doesn't match any known interfaces. Stealing configs and firmware from devices with a proper setup fails due to a signature mismatch when the (required) firmware download is attempted.</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-data">2019/10/21</td>
+                    <td class="table-data">s3ve3g*</td>
+                    <td class="table-data">NFC</td>
+                    <td class="table-data">Stock NFC HAL is undocumented and doesn't match any known interfaces. Stealing configs and firmware from devices with a proper setup fails due to a signature mismatch when the (required) firmware download is attempted.</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-data">2023/04/11</td>
+                    <td class="table-data">FDE only devices</td>
+                    <td class="table-data">Encryption</td>
+                    <td class="table-data">As of Android 13, FDE is no longer supported. All devices that can MUST migrate to FBE, but Some devices have custom keymaster HAL implementations that only allow FDE to function. Devices only capable of using FDE that are promoted to LeafOS 20 or above are exempted from encryption requirements. These devices MUST display a notice on the LeafOS Wiki that details this exemption.</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-data">2024/02/07</td>
+                    <td class="table-data">Google Pixel</td>
+                    <td class="table-data">Prebuilt Kernel</td>
+                    <td class="table-data">As of Pixel 6, Google is building the kernel with bazel, which is very time consuming to integrate in our inline builds and keep it working. Given that these new devices have 5 or 7 years of support, we do not have to compile the kernel from source, since they receive monthly security patches directly from Google. These devices MUST use source built kernel or our own LeafOS compiled prebuilt kernel once they have reached their EOL.</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-data">2024/02/16</td>
+                    <td class="table-data">coral/flame</td>
+                    <td class="table-data">Face Unlock</td>
+                    <td class="table-data">On stock, Face Unlock and Soli features were largely tied to SystemUIGoogle, with a functional Face Unlock hook pushed to AOSP. Unfortunately, Google stopped caring about Face Unlock and let it break on the Pixel 4 series, with no way to fix it without source we don't have.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="page-divider"></div>
+
+    </body>
+
+
     <hr>
     <p><strong>This document is licensed CC-BY-3.0, with portions adapted from Google’s CDD requirements.</strong></p>
     </article>
 
 </body>
+<?php 
+include 'includes/footer.php';
+?>
 </html>

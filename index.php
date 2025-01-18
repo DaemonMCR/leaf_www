@@ -42,39 +42,40 @@ include 'includes/nav.php';
         </div>
     </section>
 
+    <?php
+    // Array of screenshot categories
+    $categories = ['qs', 'others', 'styles'];
+
+    // Number of images per category
+    $qs_images = 10; // 10 images for 'qs'
+    $others_images = 10; // 10 images for 'others'
+    $styles_images = 5; // 5 images for 'styles'
+    ?>
+
     <!-- Leaf Screenshots Section -->
     <section class="content-section">
         <div class="section-bar">Leaf screenshots</div>
         <div class="screenshot-gallery">
-            <img src="./content/images/screenshots/qs/screenshot-1.webp" alt="Screenshot 1">
-            <img src="./content/images/screenshots/qs/screenshot-2.webp" alt="Screenshot 2">
-            <img src="./content/images/screenshots/qs/screenshot-3.webp" alt="Screenshot 3">
-            <img src="./content/images/screenshots/qs/screenshot-4.webp" alt="Screenshot 4">
-            <img src="./content/images/screenshots/qs/screenshot-5.webp" alt="Screenshot 5">
-            <img src="./content/images/screenshots/qs/screenshot-6.webp" alt="Screenshot 6">
-            <img src="./content/images/screenshots/qs/screenshot-7.webp" alt="Screenshot 7">
-            <img src="./content/images/screenshots/qs/screenshot-8.webp" alt="Screenshot 8">
-            <img src="./content/images/screenshots/qs/screenshot-9.webp" alt="Screenshot 9">
-            <img src="./content/images/screenshots/qs/screenshot-10.webp" alt="Screenshot 10">
-
-            <img src="./content/images/screenshots/others/screenshot-15.webp" alt="Screenshot 15">
-            <img src="./content/images/screenshots/others/screenshot-23.webp" alt="Screenshot 23">
-            <img src="./content/images/screenshots/others/screenshot-24.webp" alt="Screenshot 24">
-            <img src="./content/images/screenshots/others/screenshot-25.webp" alt="Screenshot 25">
-            <img src="./content/images/screenshots/others/screenshot-26.webp" alt="Screenshot 26">
-            <img src="./content/images/screenshots/others/screenshot-27.webp" alt="Screenshot 27">
-            <img src="./content/images/screenshots/others/screenshot-28.webp" alt="Screenshot 28">
-            <img src="./content/images/screenshots/others/screenshot-29.webp" alt="Screenshot 29">
-            <img src="./content/images/screenshots/others/screenshot-30.webp" alt="Screenshot 30">
-            <img src="./content/images/screenshots/others/screenshot-31.webp" alt="Screenshot 31">
-
-            <img src="./content/images/screenshots/styles/screenshot-1.webp" alt="Screenshot 1">
-            <img src="./content/images/screenshots/styles/screenshot-2.webp" alt="Screenshot 2">
-            <img src="./content/images/screenshots/styles/screenshot-3.webp" alt="Screenshot 3">
-            <img src="./content/images/screenshots/styles/screenshot-4.webp" alt="Screenshot 4">
-            <img src="./content/images/screenshots/styles/screenshot-4.webp" alt="Screenshot 5">
+            <?php
+            // Loop through each category
+            foreach ($categories as $category) {
+                // Set the number of images per category based on the category
+                $image_count = ($category == 'qs') ? $qs_images : (($category == 'others') ? $others_images : $styles_images);
+                
+                // Loop through the images using a for loop
+                for ($i = 1; $i <= $image_count; $i++) {
+                    // Format the image filename
+                    $imagePath = "./content/images/screenshots/{$category}/screenshot-{$i}.webp";
+                    echo "<img src='{$imagePath}' alt='Screenshot {$i}'>";
+                }
+            }
+            ?>
         </div>
     </section>
 </main>
+
+<?php 
+include 'includes/footer.php';
+?>
 </body>
 </html>
