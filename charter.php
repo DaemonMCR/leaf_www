@@ -98,7 +98,7 @@ include 'includes/nav.php';
     <h1 id="attaining-exceptions">Attaining exceptions</h1>
     <h2 id="process">Process</h2>
     <ul>
-        <li>Device or software deviations from our core product (as described below) MUST be approved by no less than 3 Project Directors.</li>
+        <li>Device or software deviations from our core product (as described below) MUST be approved by no less than 2 Project Directors.</li>
         <li>Device or software exceptions SHOULD be made via change request to this repository.</li>
         <li>All device or software exceptions that are granted MUST be documented on the Wiki for all affected devices.</li>
     </ul>
@@ -224,13 +224,7 @@ include 'includes/nav.php';
     <h1 id="software-support">Software support</h1>
     <h2 id="device-tree-structure">Device tree structure</h2>
     <ul>
-        <li>Device trees MUST contain a leaf-specific makefile with device declaration of leaf_[devicename].</li>
-        <li>
-        Device trees MUST support a leaf.dependencies file for <code>lunch</code> command &amp; roomservice to be functional.
-        <ul>
-            <li>This file MUST NOT include any dependencies outside of the &quot;LeafOS&quot; organization.</li>
-        </ul>
-        </li>
+        <li>Device trees MUST contain a leaf-compatible makefile with device declaration of [devicename].</li>
     </ul>
     <h2 id="build-type">Build type</h2>
     <ul>
@@ -282,7 +276,7 @@ include 'includes/nav.php';
     </ul>
     <h2 id="verity">Verity</h2>
     <ul>
-        <li>All devices MUST disable verity on the system image for userdebug builds.</li>
+        <li>All devices MUST disable verity on the system image for user builds.</li>
         <li>All devices SHOULD support verity on the vendor image.</li>
     </ul>
     <h2 id="updater">Updater</h2>
@@ -304,7 +298,6 @@ include 'includes/nav.php';
     <h2 id="root-su-">Root (su)</h2>
     <ul>
         <li>All devices MUST NOT ship with su included.</li>
-        <li>All devices shipping LeafOS 16.0 or earlier MUST support su installation via LeafOS provided ‘Extras’ download.</li>
     </ul>
     <h2 id="non-pie-blobs">Non-PIE Blobs</h2>
     <ul>
@@ -337,7 +330,7 @@ include 'includes/nav.php';
         </li>
     </ul>
     <h2 id="exfat-support">exFAT Support</h2>
-    <p><strong>LeafOS operates under the assumption that OEM device licensing for exFAT is attached to the device, not software. LeafOS will comply with all requests for removal of exFAT support from OEMs, Microsoft or their representatives upon contact to legal@leafos.org.</strong></p>
+    <p><strong>LeafOS operates under the assumption that OEM device licensing for exFAT is attached to the device, not software. LeafOS will comply with all requests for removal of exFAT support from OEMs, Microsoft or their representatives upon contact.</strong></p>
     <ul>
         <li>All devices shipping with a Linux kernel version of lower than 5.7 with exFAT support on stock MAY support exFAT with (and only with) a kernel based implementation of the maintainers choice.</li>
         <li>All devices shipping with a Linux kernel version of greater than or equal to 5.7 MAY support exFAT with the mainline Linux implementation, or the implementation provided by their device&#39;s vendor.</li>
@@ -352,7 +345,7 @@ include 'includes/nav.php';
     <ul>
         <li>All software deviations from other LeafOS devices of the same type MUST be approved by Directors (eg. if one wants to remove Music app, get approval).</li>
         <li>All software deviations from other LeafOS devices of the same type MUST be reported on the Wiki page for the device, with a user understandable justification.</li>
-        <li>Device maintainers MUST ship Jelly or another LeafOS sourced web browser.</li>
+        <li>Device maintainers MUST ship a LeafOS sourced web browser.</li>
     </ul>
     <h2 id="vendor-images">Vendor Images</h2>
     <ul>
@@ -376,7 +369,7 @@ include 'includes/nav.php';
     <ul>
         <li>All original contributions MUST be copyrighted as “(C) [YEAR] The LeafOS Project”.</li>
         <li>All LeafOS copyrights MUST only be additive to the copyright header.</li>
-        <li>Do not remove copyrights from CyanogenMod, Cyanogen Inc, LeafOS or any other upstream.</li>
+        <li>Do not remove copyrights from CyanogenMod, Cyanogen Inc, LineageOS or any other upstream.</li>
     </ul>
     <h2 id="workflow">Workflow</h2>
     <ul>
@@ -409,13 +402,12 @@ include 'includes/nav.php';
     </ul>
     <h2 id="leafos-recovery">LeafOS Recovery</h2>
     <ul>
-        <li>Maintainers wishing to ship LeafOS 17.0+ for their device MUST verify official LeafOS Recovery distributions work for LeafOS installation.</li>
-        <li>Maintainers wishing to ship LeafOS 18.1+ MUST ship LeafOS Recovery as the default solution for their device on the Wiki.</li>
+        <li>Maintainers wishing to ship LeafOS 1.1+ MUST ship LeafOS Recovery as the default solution for their device on the Wiki.</li>
         <li>Devices that do not have traditional recovery images MUST support &amp; document another means of installation for LeafOS zip files.</li>
     </ul>
     <h2 id="addon-packages">Addon packages</h2>
     <ul>
-        <li>Maintainers wishing to ship LeafOS 19.0+ for their device MUST verify addon packages listed on the wiki can be installed through Leaf Recovery.</li>
+        <li>Maintainers wishing to ship LeafOS 1.1+ for their device MUST verify addon packages listed on the wiki can be installed through Leaf Recovery.</li>
     </ul>
     <h1 id="exceptions">Exceptions</h1>
     <p>All currently granted exceptions should be listed in the following table. To request an exception, please submit a change to this repository.</p>

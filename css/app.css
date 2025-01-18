@@ -330,6 +330,7 @@ body {
     color: #2d6a4f;
     margin-top: 20px;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .charter p {
@@ -436,7 +437,6 @@ body {
 
 .page-divider {
     border: 0;
-    border-top: 1px solid #ddd; /* Thinner divider */
     margin: 20px auto;
     width: 80%;
 }
