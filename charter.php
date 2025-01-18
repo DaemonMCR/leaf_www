@@ -6,7 +6,7 @@ include 'includes/nav.php';
 
 <body>
     <article class="charter">
-    <p>Welcome to the LineageOS Device Support Requirements. This document enumerates the requirements that must be met in order for devices to be deemed ship ready for LineageOS releases, beginning with Android Oreo.
+    <p>Welcome to the LeafOS Device Support Requirements. This document enumerates the requirements that must be met in order for devices to be deemed ship ready for LeafOS releases, beginning with Android Oreo.
         To be considered ready, device maintainers MUST meet the requirements presented in this document, including any documents incorporated via reference.
     </p>
     <p>The use of “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” is per the IETF standard defined in RFC2119.</p>
@@ -79,7 +79,7 @@ include 'includes/nav.php';
             <li><a href="#licensing">Licensing</a></li>
             <li><a href="#wiki">Wiki</a></li>
             <li><a href="#stability">Stability</a></li>
-            <li><a href="#lineageos-recovery">LineageOS Recovery</a></li>
+            <li><a href="#leafos-recovery">LeafOS Recovery</a></li>
             <li><a href="#addon-packages">Addon packages</a></li>
         </ul>
         </li>
@@ -211,24 +211,24 @@ include 'includes/nav.php';
         <li>All devices with proprietary accessories SHOULD support those accessories (eg. O-Click, Essential 360 Camera).</li>
     </ul>
     <h2 id="hardware-deviations">Hardware Deviations</h2>
-    <p><strong>Hardware deviations are defined as exemptions granted for hardware requirements above that worked in stock, but do not work in LineageOS.</strong></p>
+    <p><strong>Hardware deviations are defined as exemptions granted for hardware requirements above that worked in stock, but do not work in LeafOS.</strong></p>
     <ul>
         <li>All hardware deviations from stock MUST be reported on the Wiki page for the device, with a user understandable justification.</li>
     </ul>
     <h1 id="software-support">Software support</h1>
     <h2 id="device-tree-structure">Device tree structure</h2>
     <ul>
-        <li>Device trees MUST contain a Lineage-specific makefile with device declaration of lineage_[devicename].</li>
+        <li>Device trees MUST contain a leaf-specific makefile with device declaration of leaf_[devicename].</li>
         <li>
-        Device trees MUST support a lineage.dependencies file for <code>breakfast</code> command &amp; roomservice to be functional.
+        Device trees MUST support a leaf.dependencies file for <code>lunch</code> command &amp; roomservice to be functional.
         <ul>
-            <li>This file MUST NOT include any dependencies outside of the &quot;LineageOS&quot; organization.</li>
+            <li>This file MUST NOT include any dependencies outside of the &quot;LeafOS&quot; organization.</li>
         </ul>
         </li>
     </ul>
     <h2 id="build-type">Build type</h2>
     <ul>
-        <li>All devices MUST be configured as userdebug releases.</li>
+        <li>All devices MUST be configured as user releases.</li>
     </ul>
     <h2 id="kernel">Kernel</h2>
     <ul>
@@ -281,7 +281,7 @@ include 'includes/nav.php';
     </ul>
     <h2 id="updater">Updater</h2>
     <ul>
-        <li>All devices with a shipping build of LineageOS MUST support upgrades via the native LineageOS Updater application &amp; the recovery documented on the Wiki for that device.</li>
+        <li>All devices with a shipping build of LeafOS MUST support upgrades via the native LeafOS Updater application &amp; the recovery documented on the Wiki for that device.</li>
     </ul>
     <h2 id="frp">FRP</h2>
     <ul>
@@ -298,7 +298,7 @@ include 'includes/nav.php';
     <h2 id="root-su-">Root (su)</h2>
     <ul>
         <li>All devices MUST NOT ship with su included.</li>
-        <li>All devices shipping LineageOS 16.0 or earlier MUST support su installation via LineageOS provided ‘Extras’ download.</li>
+        <li>All devices shipping LeafOS 16.0 or earlier MUST support su installation via LeafOS provided ‘Extras’ download.</li>
     </ul>
     <h2 id="non-pie-blobs">Non-PIE Blobs</h2>
     <ul>
@@ -306,10 +306,10 @@ include 'includes/nav.php';
     </ul>
     <h2 id="proprietary-files-extraction">Proprietary files extraction</h2>
     <ul>
-        <li>Devices MUST have a working proprietary files extraction script in their device tree (or device tree dependencies) that reproduces an exact copy of the binaries required to build LineageOS from an existing LineageOS installation.</li>
+        <li>Devices MUST have a working proprietary files extraction script in their device tree (or device tree dependencies) that reproduces an exact copy of the binaries required to build LeafOS from an existing LeafOS installation.</li>
         <li>Devices SHOULD use the global extraction script (located in tools/extract-utils).</li>
         <li>If a device maintainer elects to not use the common extraction script, the maintainer MUST ensure that the Wiki page for their device has valid instructions for operating the custom extraction script.</li>
-        <li>Devices MUST use proprietary files extracted from, in order of preference, the same device&#39;s publicly-released image, another device&#39;s publicly-released image, or some other source with appropriately transferrable use/release/dissemination rights. In the event of the last option, artifacts documenting suitable transferability of rights MUST be provided to LineageOS project leadership.</li>
+        <li>Devices MUST use proprietary files extracted from, in order of preference, the same device&#39;s publicly-released image, another device&#39;s publicly-released image, or some other source with appropriately transferrable use/release/dissemination rights. In the event of the last option, artifacts documenting suitable transferability of rights MUST be provided to LeafOS project leadership.</li>
         <li>All proprietary files lists MUST contain a short comment noting the source of any un-pinned (default) proprietary files.</li>
         <li>Any proprietary files not sourced from the noted default MUST be pinned in the respective proprietary files list and have a short comment noting the source of those proprietary files.</li>
         <li>Devices MUST NOT include blobs belonging to Megvii Technology Ltd. or SenseTime Group Ltd.</li>
@@ -326,12 +326,12 @@ include 'includes/nav.php';
         A/B devices are exempted from the above rule, and instead must do one of the following:
         <ul>
             <li>If the device is capable of shipping firmware it MUST do so.</li>
-            <li>If the device is not capable of shipping firmware (eg. a device with multiple variants supported in one build) the device MUST ensure both slots are on a known good firmware (eg. using the copy-partitions before_lineage_install template on the Wiki).</li>
+            <li>If the device is not capable of shipping firmware (eg. a device with multiple variants supported in one build) the device MUST ensure both slots are on a known good firmware (eg. using the copy-partitions before_leaf_install template on the Wiki).</li>
         </ul>
         </li>
     </ul>
     <h2 id="exfat-support">exFAT Support</h2>
-    <p><strong>LineageOS operates under the assumption that OEM device licensing for exFAT is attached to the device, not software. LineageOS will comply with all requests for removal of exFAT support from OEMs, Microsoft or their representatives upon contact to legal@lineageos.org.</strong></p>
+    <p><strong>LeafOS operates under the assumption that OEM device licensing for exFAT is attached to the device, not software. LeafOS will comply with all requests for removal of exFAT support from OEMs, Microsoft or their representatives upon contact to legal@leafos.org.</strong></p>
     <ul>
         <li>All devices shipping with a Linux kernel version of lower than 5.7 with exFAT support on stock MAY support exFAT with (and only with) a kernel based implementation of the maintainers choice.</li>
         <li>All devices shipping with a Linux kernel version of greater than or equal to 5.7 MAY support exFAT with the mainline Linux implementation, or the implementation provided by their device&#39;s vendor.</li>
@@ -342,11 +342,11 @@ include 'includes/nav.php';
         <li>All devices SHOULD support in-kernel (MDSS, MDNIE or similar) LiveDisplay colour adjustment.</li>
     </ul>
     <h2 id="software-deviations">Software Deviations</h2>
-    <p><strong>Software deviations are defined as exemptions granted for software requirements above that worked in stock, but do not work in LineageOS.</strong></p>
+    <p><strong>Software deviations are defined as exemptions granted for software requirements above that worked in stock, but do not work in LeafOS.</strong></p>
     <ul>
-        <li>All software deviations from other LineageOS devices of the same type MUST be approved by Directors (eg. if one wants to remove Music app, get approval).</li>
-        <li>All software deviations from other LineageOS devices of the same type MUST be reported on the Wiki page for the device, with a user understandable justification.</li>
-        <li>Device maintainers MUST ship Jelly or another LineageOS sourced web browser.</li>
+        <li>All software deviations from other LeafOS devices of the same type MUST be approved by Directors (eg. if one wants to remove Music app, get approval).</li>
+        <li>All software deviations from other LeafOS devices of the same type MUST be reported on the Wiki page for the device, with a user understandable justification.</li>
+        <li>Device maintainers MUST ship Jelly or another LeafOS sourced web browser.</li>
     </ul>
     <h2 id="vendor-images">Vendor Images</h2>
     <ul>
@@ -368,9 +368,9 @@ include 'includes/nav.php';
     </ul>
     <h2 id="copyrights">Copyrights</h2>
     <ul>
-        <li>All original contributions MUST be copyrighted as “(C) [YEAR] The LineageOS Project”.</li>
-        <li>All LineageOS copyrights MUST only be additive to the copyright header.</li>
-        <li>Do not remove copyrights from CyanogenMod, Cyanogen Inc or any other upstream.</li>
+        <li>All original contributions MUST be copyrighted as “(C) [YEAR] The LeafOS Project”.</li>
+        <li>All LeafOS copyrights MUST only be additive to the copyright header.</li>
+        <li>Do not remove copyrights from CyanogenMod, Cyanogen Inc, LeafOS or any other upstream.</li>
     </ul>
     <h2 id="workflow">Workflow</h2>
     <ul>
@@ -392,24 +392,24 @@ include 'includes/nav.php';
     </ul>
     <h2 id="wiki">Wiki</h2>
     <ul>
-        <li>All devices with a shipping build of LineageOS MUST have a Wiki page with valid installation instructions.</li>
-        <li>All devices with a shipping build of LineageOS MUST document Hardware Deviations from stock capabilities.</li>
-        <li>All devices with a shipping build of LineageOS MUST document Software Deviations from other LineageOS releases of the same device type.</li>
+        <li>All devices with a shipping build of LeafOS MUST have a Wiki page with valid installation instructions.</li>
+        <li>All devices with a shipping build of LeafOS MUST document Hardware Deviations from stock capabilities.</li>
+        <li>All devices with a shipping build of LeafOS MUST document Software Deviations from other LeafOS releases of the same device type.</li>
     </ul>
     <h2 id="stability">Stability</h2>
     <ul>
         <li>Issues like the &quot;screen of death&quot; MUST NOT affect the device.</li>
         <li>The device MUST NOT have abnormal battery drain.</li>
     </ul>
-    <h2 id="lineageos-recovery">LineageOS Recovery</h2>
+    <h2 id="leafos-recovery">LeafOS Recovery</h2>
     <ul>
-        <li>Maintainers wishing to ship LineageOS 17.0+ for their device MUST verify official LineageOS Recovery distributions work for LineageOS installation.</li>
-        <li>Maintainers wishing to ship LineageOS 18.1+ MUST ship LineageOS Recovery as the default solution for their device on the Wiki.</li>
-        <li>Devices that do not have traditional recovery images MUST support &amp; document another means of installation for LineageOS zip files.</li>
+        <li>Maintainers wishing to ship LeafOS 17.0+ for their device MUST verify official LeafOS Recovery distributions work for LeafOS installation.</li>
+        <li>Maintainers wishing to ship LeafOS 18.1+ MUST ship LeafOS Recovery as the default solution for their device on the Wiki.</li>
+        <li>Devices that do not have traditional recovery images MUST support &amp; document another means of installation for LeafOS zip files.</li>
     </ul>
     <h2 id="addon-packages">Addon packages</h2>
     <ul>
-        <li>Maintainers wishing to ship LineageOS 19.0+ for their device MUST verify addon packages listed on the wiki can be installed through Lineage Recovery.</li>
+        <li>Maintainers wishing to ship LeafOS 19.0+ for their device MUST verify addon packages listed on the wiki can be installed through Leaf Recovery.</li>
     </ul>
     <h1 id="exceptions">Exceptions</h1>
     <p>All currently granted exceptions should be listed in the following table. To request an exception, please submit a change to this repository.</p>
@@ -451,13 +451,13 @@ include 'includes/nav.php';
             <td>2023/04/11</td>
             <td>FDE only devices</td>
             <td>Encryption</td>
-            <td>As of Android 13, FDE is no longer supported. All devices that can MUST migrate to FBE, but Some devices have custom keymaster HAL implementations that only allow FDE to function. Devices only capable of using FDE that are promoted to LineageOS 20 or above are exempted from encryption requirements. These devices MUST display a notice on the LineageOS Wiki that details this exemption.</td>
+            <td>As of Android 13, FDE is no longer supported. All devices that can MUST migrate to FBE, but Some devices have custom keymaster HAL implementations that only allow FDE to function. Devices only capable of using FDE that are promoted to LeafOS 20 or above are exempted from encryption requirements. These devices MUST display a notice on the LeafOS Wiki that details this exemption.</td>
         </tr>
         <tr>
             <td>2024/02/07</td>
             <td>Google Pixel</td>
             <td>Prebuilt Kernel</td>
-            <td>As of Pixel 6, Google is building the kernel with bazel, which is very time consuming to integrate in our inline builds and keep it working. Given that these new devices have 5 or 7 years of support, we do not have to compile the kernel from source, since they receive monthly security patches directly from Google. These devices MUST use source built kernel or our own LineageOS compiled prebuilt kernel once they have reached their EOL.</td>
+            <td>As of Pixel 6, Google is building the kernel with bazel, which is very time consuming to integrate in our inline builds and keep it working. Given that these new devices have 5 or 7 years of support, we do not have to compile the kernel from source, since they receive monthly security patches directly from Google. These devices MUST use source built kernel or our own LeafOS compiled prebuilt kernel once they have reached their EOL.</td>
         </tr>
         <tr>
             <td>2024/02/16</td>
