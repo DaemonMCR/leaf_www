@@ -451,21 +451,41 @@ body {
 
 /* Footer styling */
 .footer {
+    display: flex; /* Use flexbox to align content */
+    justify-content: space-between; /* Space between text and logo */
+    align-items: center; /* Vertically center content */
     width: 100%;
     background-color: #141F1A;
     color: #6C9381; /* White text color */
-    text-align: left; /* Align text to the left */
-    padding-bottom: 80px; /* Padding for the footer */
+    padding: 20px 40px; /* Padding for the footer */
     font-size: 16px; /* Font size */
     position: relative; /* Footer is placed naturally at the bottom */
+    box-sizing: border-box; /* Include padding in the total width calculation */
 }
 
-/* Move only the text (inside .content and .footer-content) */
-.content p,
-.footer-content p,
-.footer-content h2 {
-    padding-left: 148px; /* Move text 148px to the right */
+/* Footer text styling */
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    justify-content: center;
+    padding-left: 108px; /* Keep text offset (move text 148px to the right) */
+}
+
+.footer-content h2,
+.footer-content p {
     margin: 0; /* Remove default margin */
-    position: relative; /* Keep text positioning relative to its current location */
-    top: 30px; /* Move text 20px down */
+}
+
+/* Footer Logo */
+.footer-logo {
+    display: flex;
+    align-items: center; /* Vertically center the logo */
+    justify-content: flex-end; /* Align logo to the right */
+    max-width: 30%; /* Ensure the logo container does not overflow */
+}
+
+.footer-logo img {
+    height: 50px; /* Adjust height to make logo smaller */
+    width: auto; /* Keep aspect ratio */
+    max-width: 100%; /* Ensure the image doesn't overflow the container */
 }
