@@ -8,7 +8,7 @@ include 'includes/nav.php';
         <div class="section-bar">Welcome to the Leaf OS Project!</div>
         <p class="leaf-features">LeafOS is a no-nonsense custom ROM designed to give you exactly what you need without the fluff. We've cut out the unnecessary clutter and included only the essentials, so you get a clean, efficient Android experience.</p>
         <p class="leaf-features">Ready to upgrade your device? Let's get started with LeafOS!</p>
-        <a href="download.php" class="get-leaf-button">Get LeafOS</a>
+        <a href="wiki.php" class="get-leaf-button">Get LeafOS</a>
         <div class="section-bar">Leaf features</div>
     </section>
     

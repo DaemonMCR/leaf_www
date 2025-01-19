@@ -9,6 +9,6 @@
         <a href="about.php">About</a>
         <a href="charter.php">Charter</a>
         <a href="wiki.php">Wiki</a>
-        <a href="download.php" class="download-button">Download</a>
+        <a href="wiki.php" class="download-button">Download</a>
     </nav>
 </header>

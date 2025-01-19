@@ -471,6 +471,14 @@ include 'includes/nav.php';
         </table>
     </div>
 
+    <h1 id="submitting-a-port">Submitting a port</h1>
+    <p>Congratulations! After weeks (months?) of hard work, LeafOS is running well on your device! If you’re interested in adding your device to LeafOS’ roster of officially supported devices, we ask that you meet all of the prerequisites above and then get in touch with our developer relations team.</p>
+    <h1 id="submitting-your-device">Submitting your device</h1>
+    <p>Send an email to thomas_turner@talktalk.net. The email should contain:</p>
+    <p>- Links to your device, vendor, and kernel trees on GitHub.</p>
+    <p>- Email addresses of all maintainers. If a team worked on your device, all team members must be listed in the email.</p>
+    <p>Please be patient once you’ve sent your email. It takes time to review your source code and vendor blobs. If changes are deemed necessary, you’ll receive notice and suggestions for improvement. It will be up to you to implement the changes before resubmitting your work for approval. Keep in mind that not all device port requests are accepted. Developer relations will do their best to inform you of the rationale for their decision, though.</p>
+
     <div class="page-divider"></div>
 
     </body>
